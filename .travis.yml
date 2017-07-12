@@ -20,5 +20,5 @@ before_deploy:
 deploy:
   provider: surge
   project: ./dist/
-  domain: tepsi.co
+  domain: vue-foursquare.surge.sh
   skip_cleanup: true
