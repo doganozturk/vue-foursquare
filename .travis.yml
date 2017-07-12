@@ -1,0 +1,24 @@
+language: node_js
+
+node_js:
+  - "7"
+
+sudo: false
+
+cache: yarn
+
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh
+
+script:
+  - yarn run lint
+
+before_deploy:
+  - yarn run build
+  - cp ./dist/index.html
+
+deploy:
+  provider: surge
+  project: ./dist/
+  domain: tepsi.co
+  skip_cleanup: true
