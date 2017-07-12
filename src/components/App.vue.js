@@ -1,4 +1,4 @@
-import Hello from "./components/Hello/Hello";
+import Hello from "./Hello/Hello";
 
 export default {
   name: "app",

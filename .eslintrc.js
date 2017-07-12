@@ -23,6 +23,7 @@ module.exports = {
   // add your custom rules here
   rules: {
     "comma-dangle": "off",
+    "global-require": "off",
     "prettier/prettier": "error",
     // don't require .vue extension when importing
     "import/extensions": [
