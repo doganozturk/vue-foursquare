@@ -1,3 +1,20 @@
-h1 {
-	color: black;
+footer {
+	height: 100px;
+	text-align: center;
+	background-color: white;
+
+	div {
+		margin: 44px 0;
+
+		.link {
+			font-size: 12px;
+			font-weight: 500;
+			text-decoration: none;
+			color: #9b9b9b;
+
+			&:nth-child(2) {
+				margin: 0 20px;
+			}
+		}
+	}
 }
