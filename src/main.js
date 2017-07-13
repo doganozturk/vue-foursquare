@@ -1,7 +1,7 @@
 import Vue from "vue";
 
-// import components
-import App from "./components/App";
+// import base layout
+import App from "./layout/App";
 
 // import router
 import router from "./router";
