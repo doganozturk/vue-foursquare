@@ -1,11 +1,14 @@
+import Hello from "../components/Hello/Hello";
+import NotFound from "../components/NotFound/NotFound";
+
 const routes = [
   {
     path: "/",
-    component: require("../components/Hello/Hello.vue")
+    component: Hello
   },
   {
     path: "*",
-    component: require("../components/NotFound/NotFound.vue")
+    component: NotFound
   }
 ];
 
