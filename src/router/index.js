@@ -1,12 +1,14 @@
-const routes = [
-  {
-    path: "/",
-    component: require("../components/Hello/Hello.vue")
-  },
-  {
-    path: "*",
-    component: require("../components/NotFound/NotFound.vue")
-  }
-];
+import Vue from "vue";
+import VueRouter from "vue-router";
 
-export default routes;
+import routes from "./routes";
+
+Vue.use(VueRouter);
+
+const router = new VueRouter({
+  mode: "history",
+  base: __dirname,
+  routes
+});
+
+export default router;

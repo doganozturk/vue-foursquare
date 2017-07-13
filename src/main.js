@@ -1,23 +1,10 @@
 import Vue from "vue";
-import VueRouter from "vue-router";
 
 // import components
 import App from "./components/App";
 
-// import map
-import routes from "./router";
-
-Vue.config.debug = true;
-Vue.config.devTools = true;
-
-// router config
-Vue.use(VueRouter);
-
-const router = new VueRouter({
-  mode: "history",
-  base: __dirname,
-  routes
-});
+// import router
+import router from "./router";
 
 // mount Vue
 // eslint-disable-next-line
