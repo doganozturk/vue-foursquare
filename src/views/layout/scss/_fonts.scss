@@ -6,6 +6,20 @@
 }
 
 @font-face {
+	font-family: 'Gotham-Light';
+	src:
+		local('Gotham-Light'),
+		url('../../assets/fonts/Gotham-Light.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Gotham-Thin';
+	src:
+		local('Gotham-Thin'),
+		url('../../assets/fonts/Gotham-Thin.otf') format('opentype');
+}
+
+@font-face {
 	font-family: 'Gotham-XLight';
 	src:
 		local('Gotham-XLight'),
