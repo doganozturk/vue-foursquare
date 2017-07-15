@@ -1,7 +1,7 @@
-import Home from "../pages/Home/Home";
-import Venues from "../pages/Venues/Venues";
-import VenueDetail from "../pages/VenueDetail/VenueDetail";
-import NotFound from "../pages/NotFound/NotFound";
+import Home from "../views/pages/Home/Home";
+import Venues from "../views/pages/Venues/Venues";
+import VenueDetail from "../views/pages/VenueDetail/VenueDetail";
+import NotFound from "../views/pages/NotFound/NotFound";
 
 const routes = [
   {

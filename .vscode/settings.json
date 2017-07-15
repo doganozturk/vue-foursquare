@@ -1,0 +1,22 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+  "files.associations": {
+    "*.html": "twig"
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/public": true,
+    "**/assets/js/external": true,
+    "**/logs": true,
+    "**/.history": true,
+    "**/views-swig/partial/build": true,
+    "**/.yarn_cache": true,
+    "**/yarn.lock": true,
+    "**/yarn-error.log": true,
+		"**/typings": true,
+		"**/dist": true,
+    "**/.unison.**": true,
+    "config/autoload/.history": true
+  }
+}
