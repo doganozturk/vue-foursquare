@@ -1,6 +1,31 @@
+$color-header-info-text: #fff;
+
 header {
 	height: calc(100% - 100px);
 	text-align: center;
 	background: url('../../../assets/images/background.png') no-repeat center center fixed;
 	background-size: cover;
+
+	.logo {
+		margin-bottom: 23px;
+	}
+
+	.info {
+		color: $color-header-info-text;
+
+		h1 {
+			width: 590px;
+			margin: 0 auto 17px;
+			font-family: 'Gotham-XLight';
+			font-size: 55px;
+		}
+
+		div {
+			width: 543px;
+			margin: 0 auto 65px;
+			font-family: 'Gotham-Book';
+			font-size: 16px;
+			line-height: 22px;
+		}
+	}
 }

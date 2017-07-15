@@ -1,8 +1,20 @@
 @font-face {
 	font-family: 'Gotham-Medium';
-	font-style: normal;
-	font-weight: normal;
 	src:
 		local('Gotham-Medium'),
 		url('../../assets/fonts/Gotham-Medium.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Gotham-XLight';
+	src:
+		local('Gotham-XLight'),
+		url('../../assets/fonts/Gotham-XLight.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Gotham-Book';
+	src:
+		local('Gotham-Book'),
+		url('../../assets/fonts/Gotham-Book.otf') format('opentype');
 }

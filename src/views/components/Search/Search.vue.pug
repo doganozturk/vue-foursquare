@@ -1,1 +1,18 @@
-h1 Search
+div(class="search")
+	div(class="form-element")
+		input(type="text" class="keyword" placeholder="I'm looking for")
+	div(class="form-element")
+		input(type="text" class="place" placeholder="place")
+	div(class="form-element")
+		input(type="submit" value="")
+		span
+			svg(xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63")
+				defs
+					filter(id="a" width="198.7%" height="266.7%" x="-48.7%" y="-56.7%" filterUnits="objectBoundingBox")
+						feOffset(dy="12" in="SourceAlpha" result="shadowOffsetOuter1")
+						feGaussianBlur(in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10.5")
+						feColorMatrix(in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.238196332 0")
+						feMerge
+							feMergeNode(in="shadowMatrixOuter1")
+							feMergeNode(in="SourceGraphic")
+				path(fill="#FFF" fill-rule="evenodd" d="M50.522 32.214l-4.816-4.816c2.935-4.04 2.581-9.727-1.062-13.371A10.304 10.304 0 0 0 37.335 11c-2.645 0-5.29 1.01-7.308 3.027-4.036 4.036-4.036 10.58 0 14.617a10.303 10.303 0 0 0 7.308 3.027c2.13 0 4.26-.656 6.063-1.965l4.816 4.816c.319.319.736.478 1.154.478a1.632 1.632 0 0 0 1.154-2.786zm-18.88-5.186c-3.138-3.139-3.138-8.246 0-11.385a7.998 7.998 0 0 1 5.693-2.358c2.15 0 4.173.837 5.693 2.358 3.14 3.139 3.14 8.246 0 11.385a7.998 7.998 0 0 1-5.693 2.358 7.999 7.999 0 0 1-5.692-2.358z" filter="url(#a)" transform="translate(-7 -3)")

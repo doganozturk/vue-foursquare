@@ -1,3 +1,5 @@
+$color-footer-link: #9b9b9b;
+
 footer {
 	height: 100px;
 	text-align: center;
@@ -9,12 +11,16 @@ footer {
 		.link {
 			font-family: 'Gotham-Medium';
 			font-size: 12px;
-			font-weight: 500;
 			text-decoration: none;
-			color: #9b9b9b;
+			color: $color-footer-link;
+			transition: color 200ms cubic-bezier(0.185, 0.54, 0.355, 1);
 
 			&:nth-child(2) {
-				margin: 0 20px;
+				margin: 0 18px;
+			}
+
+			&:hover {
+				color: lighten($color-footer-link, 10%);
 			}
 		}
 	}
