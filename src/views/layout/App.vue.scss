@@ -7,6 +7,18 @@ body {
 	height: 100%;
 }
 
+.container {
+	display: block;
+	width: 960px;
+	margin: 0 auto;
+}
+
+.group::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
 #app {
 	height: 100%;
 }
