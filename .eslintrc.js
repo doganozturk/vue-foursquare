@@ -22,7 +22,9 @@ module.exports = {
   },
   // add your custom rules here
   rules: {
+    "no-plusplus": "off",
     "comma-dangle": "off",
+    "no-underscore-dangle": "off",
     "global-require": "off",
     "prettier/prettier": "error",
     // don't require .vue extension when importing
