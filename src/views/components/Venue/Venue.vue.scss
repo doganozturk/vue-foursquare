@@ -30,9 +30,13 @@ $color-venue-overlay-bg: #12195f;
 		z-index: 2;
 
 		h3 {
+			width: 250px;
 			margin-left: 18px;
 			font-family: 'Gotham-Book';
 			font-size: 25px;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
 		}
 
 		hr {

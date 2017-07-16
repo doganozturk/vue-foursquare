@@ -1,6 +1,6 @@
 router-link(to="/venue-detail" class="venue" :style="{ 'background-image': 'url(' + getFeaturedPhoto + ')' }")
 	div(class="info")
-		h3 {{ venue.venue.name }}
+		h3(:title="venue.venue.name") {{ venue.venue.name }}
 		hr
 		div(class="info-bottom")
 			div(class="people")
