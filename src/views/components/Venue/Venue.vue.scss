@@ -9,9 +9,14 @@ $color-venue-overlay-bg: #12195f;
 	margin-bottom: 20px;
 	overflow: hidden;
 	text-decoration: none;
+	transition: box-shadow 500ms cubic-bezier(0.185, 0.54, 0.355, 1);
 
 	&:nth-child(odd) {
 		margin-right: 20px;
+	}
+
+	&:hover {
+		box-shadow: 0 0 34px 0 rgba(0, 0, 0, 0.32);
 	}
 
 	.venue-overlay {
@@ -21,6 +26,11 @@ $color-venue-overlay-bg: #12195f;
 		height: 100%;
 		opacity: 0.5;
 		background-color: $color-venue-overlay-bg;
+		transition: background-color 500ms cubic-bezier(0.185, 0.54, 0.355, 1);
+
+		&:hover {
+			background-color: inherit;
+		}
 	}
 
 	.info {

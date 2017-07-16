@@ -29,7 +29,6 @@ $color-search-input-submit-bg: #ff5f5f;
 
 			&:hover {
 				background-color: lighten($color-search-input-submit-bg, 2%);
-				cursor: pointer;
 			}
 		}
 
@@ -70,8 +69,11 @@ $color-search-input-submit-bg: #ff5f5f;
 			}
 
 			&[type=submit] {
+				position: relative;
 				width: 77px;
 				height: 45px;
+				z-index: 2;
+				cursor: pointer;
 			}
 		}
 	}

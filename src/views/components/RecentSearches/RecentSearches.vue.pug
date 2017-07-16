@@ -4,5 +4,5 @@ section(class="recent-searches")
 	div
 		ul
 			template(v-for="recentSearch in reverseRecentSearches")
-				router-link(:to="{ path: 'venues', query: { location: recentSearch.location, query: recentSearch.query }}")
+				a(@click="fetchVenues(recentSearch.location, recentSearch.query)")
 					li {{ recentSearch.query }} in {{ recentSearch.location }}

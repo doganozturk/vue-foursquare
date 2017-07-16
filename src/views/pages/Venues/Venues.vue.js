@@ -2,7 +2,7 @@ import { mapGetters } from "vuex";
 import HeaderVenues from "../../components/HeaderVenues/HeaderVenues";
 import Venue from "../../components/Venue/Venue";
 import RecentSearches from "../../components/RecentSearches/RecentSearches";
-import Footer from "../../components/Footer/Footer";
+import AppFooter from "../../components/AppFooter/AppFooter";
 
 export default {
   name: "Venues",
@@ -11,33 +11,35 @@ export default {
       recentSearches: []
     };
   },
+  computed: {
+    ...mapGetters(["venues"])
+  },
   components: {
     HeaderVenues,
     Venue,
     RecentSearches,
-    Footer
+    AppFooter
   },
-  computed: {
-    ...mapGetters(["venues"])
+  watch: {
+    $route: "setRecentSearches"
   },
   created() {
-    this.fetchVenues();
-
     this.setRecentSearches();
+    this.setVenues();
   },
   methods: {
-    fetchVenues() {
-      this.$store
-        .dispatch("fetchVenues", {
-          location: this.$route.query.location,
-          query: this.$route.query.query
-        })
-        .then(() => {
-          this.venues = this.$store.state.venues;
-        });
-    },
     setRecentSearches() {
       this.recentSearches = JSON.parse(localStorage.getItem("recentSearches"));
+    },
+    setVenues() {
+      const venues = this.$store.state.venues;
+      this.venues = venues.length ? venues : this.fetchVenues();
+    },
+    fetchVenues() {
+      this.$store.dispatch("fetchVenues", {
+        location: this.$route.query.location,
+        query: this.$route.query.query
+      });
     }
   }
 };

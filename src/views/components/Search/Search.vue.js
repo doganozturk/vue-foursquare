@@ -1,3 +1,5 @@
+import { mapGetters } from "vuex";
+
 export default {
   name: "Search",
   data() {
@@ -5,6 +7,9 @@ export default {
       location: "",
       query: ""
     };
+  },
+  computed: {
+    ...mapGetters(["venues"])
   },
   methods: {
     setRecentSearches() {
@@ -22,9 +27,16 @@ export default {
 
       localStorage.setItem("recentSearches", JSON.stringify(recentSearches));
     },
-    getVenues() {
+    fetchVenues() {
       this.setRecentSearches();
-
+      this.$store
+        .dispatch("fetchVenues", {
+          location: this.location,
+          query: this.query
+        })
+        .then(() => {
+          this.venues = this.$store.state.venues;
+        });
       this.$router.push({
         path: "venues",
         query: { location: this.location, query: this.query }

@@ -1,4 +1,4 @@
-form(class="search" v-on:submit.prevent="getVenues")
+form(class="search" v-on:submit.prevent="fetchVenues")
 	div(class="form-element")
 		input(type="text" class="keyword" placeholder="I'm looking for" v-model="query")
 	div(class="form-element")
