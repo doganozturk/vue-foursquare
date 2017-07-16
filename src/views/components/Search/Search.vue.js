@@ -1,5 +1,3 @@
-import router from "../../../router";
-
 export default {
   name: "Search",
   data() {
@@ -9,8 +7,25 @@ export default {
     };
   },
   methods: {
+    setRecentSearches() {
+      let recentSearches = localStorage.getItem("recentSearches") || [];
+
+      if (typeof recentSearches === "string")
+        recentSearches = JSON.parse(recentSearches);
+
+      if (recentSearches.length > 9) recentSearches.shift();
+
+      recentSearches.push({
+        location: this.location,
+        query: this.query
+      });
+
+      localStorage.setItem("recentSearches", JSON.stringify(recentSearches));
+    },
     getVenues() {
-      router.push({
+      this.setRecentSearches();
+
+      this.$router.push({
         path: "venues",
         query: { location: this.location, query: this.query }
       });

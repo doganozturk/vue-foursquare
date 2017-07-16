@@ -34,6 +34,7 @@ $color-recent-searches-item-border-bottom: #e4e4e4;
 		margin: 0 auto;
 		font-size: 14px;
 		text-decoration: none;
+		text-transform: capitalize;
 		color: $color-recent-searches-item;
 		transition: color 200ms cubic-bezier(0.185, 0.54, 0.355, 1);
 

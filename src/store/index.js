@@ -23,7 +23,7 @@ const mutations = {
 const actions = {
   fetchVenues(context, body) {
     return HTTP.fetchVenues(body).then(response => {
-      context.commit("setVenues", response);
+      context.commit("setVenues", response.response);
     });
   }
 };

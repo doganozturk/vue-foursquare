@@ -2,17 +2,9 @@ section
 	HeaderVenues
 	section(class="container group")
 		section(class="venues")
-			Venue
-			Venue
-			Venue
-			Venue
-			Venue
-			Venue
-			Venue
-			Venue
-			Venue
-			Venue
-		RecentSearches
+			template(v-for="venue in venues")
+				Venue(:venue="venue")
+		RecentSearches(:recentSearches="recentSearches")
 	section(class="container")
 		hr
 	Footer

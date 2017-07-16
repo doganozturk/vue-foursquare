@@ -3,23 +3,6 @@ section(class="recent-searches")
 	hr
 	div
 		ul
-			router-link(to="/venues")
-				li Pizza in Kadikoy
-			router-link(to="/venues")
-				li Pizza in Kadikoy
-			router-link(to="/venues")
-				li Pizza in Kadikoy
-			router-link(to="/venues")
-				li Pizza in Kadikoy
-			router-link(to="/venues")
-				li Pizza in Kadikoy
-			router-link(to="/venues")
-				li Pizza in Kadikoy
-			router-link(to="/venues")
-				li Pizza in Kadikoy
-			router-link(to="/venues")
-				li Pizza in Kadikoy
-			router-link(to="/venues")
-				li Pizza in Kadikoy
-			router-link(to="/venues")
-				li Pizza in Kadikoy
+			template(v-for="recentSearch in reverseRecentSearches")
+				router-link(:to="{ path: 'venues', query: { location: recentSearch.location, query: recentSearch.query }}")
+					li {{ recentSearch.query }} in {{ recentSearch.location }}

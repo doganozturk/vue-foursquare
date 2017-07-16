@@ -7,7 +7,9 @@ import Footer from "../../components/Footer/Footer";
 export default {
   name: "Venues",
   data() {
-    return {};
+    return {
+      recentSearches: []
+    };
   },
   components: {
     HeaderVenues,
@@ -19,11 +21,23 @@ export default {
     ...mapGetters(["venues"])
   },
   created() {
-    this.$store
-      .dispatch("fetchVenues", {
-        location: this.$route.query.location,
-        query: this.$route.query.query
-      })
-      .then(() => {});
+    this.fetchVenues();
+
+    this.setRecentSearches();
+  },
+  methods: {
+    fetchVenues() {
+      this.$store
+        .dispatch("fetchVenues", {
+          location: this.$route.query.location,
+          query: this.$route.query.query
+        })
+        .then(() => {
+          this.venues = this.$store.state.venues;
+        });
+    },
+    setRecentSearches() {
+      this.recentSearches = JSON.parse(localStorage.getItem("recentSearches"));
+    }
   }
 };
