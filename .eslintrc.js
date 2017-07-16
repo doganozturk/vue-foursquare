@@ -22,6 +22,8 @@ module.exports = {
   },
   // add your custom rules here
   rules: {
+    "no-shadow": "off",
+    "no-param-reassign": "off",
     "no-plusplus": "off",
     "comma-dangle": "off",
     "no-underscore-dangle": "off",

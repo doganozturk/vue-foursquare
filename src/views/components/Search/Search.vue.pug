@@ -1,8 +1,8 @@
-div(class="search")
+form(class="search" v-on:submit.prevent="getVenues")
 	div(class="form-element")
-		input(type="text" class="keyword" placeholder="I'm looking for")
+		input(type="text" class="keyword" placeholder="I'm looking for" v-model="query")
 	div(class="form-element")
-		input(type="text" class="place" placeholder="place")
+		input(type="text" class="place" placeholder="place" v-model="location")
 	div(class="form-element")
 		input(type="submit" value="")
 		span

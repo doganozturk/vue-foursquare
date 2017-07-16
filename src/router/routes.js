@@ -10,7 +10,10 @@ const routes = [
   },
   {
     path: "/venues",
-    component: Venues
+    component: Venues,
+    props: route => ({
+      query: { location: route.query.location, query: route.query.query }
+    })
   },
   {
     path: "/venue-detail",
