@@ -1,10 +1,10 @@
-import Header from "../../components/Header/Header";
+import HeaderHome from "../../components/HeaderHome/HeaderHome";
 import Footer from "../../components/Footer/Footer";
 
 export default {
   name: "Home",
   components: {
-    Header,
+    HeaderHome,
     Footer
   }
 };

@@ -1,3 +1,63 @@
-h1 {
-	color: black;
+$color-venues-separator: #e3e3e3;
+$color-tips-owner-name: #fff;
+
+.venue-detail {
+	float: left;
+	width: 600px;
+	margin: 40px 0 42px 15px;
+
+	&-image {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		float: left;
+		width: 290px;
+		height: 290px;
+		margin-bottom: 20px;
+		overflow: hidden;
+		background-image: url('../../../assets/images/background.png');
+		background-size: cover;
+
+		&:nth-child(odd) {
+			margin-right: 20px;
+		}
+
+		&.venue-detail-owner {
+			background-color: rgba(18, 25, 95, 0.5);
+
+			.avatar {
+				margin-bottom: 21px;
+
+				&-overlay {
+					position: relative;
+					display: inline-block;
+					width: 40px;
+					height: 40px;
+					transform: rotate(-45deg);
+					overflow: hidden;
+
+					img {
+						position: absolute;
+						width: 150%;
+						height: 150%;
+						top: -10px;
+						left: -10px;
+						transform: rotate(45deg);
+					}
+				}
+			}
+
+			span {
+				font-family: 'Gotham-Medium';
+				font-size: 14px;
+				color: $color-tips-owner-name;
+			}
+		}
+	}
+}
+
+hr {
+	margin: 0;
+	border: 1px solid $color-venues-separator;
 }

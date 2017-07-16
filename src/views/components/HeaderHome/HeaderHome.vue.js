@@ -1,7 +1,7 @@
 import Search from "../../components/Search/Search";
 
 export default {
-  name: "Header",
+  name: "HeaderHome",
   components: {
     Search
   }

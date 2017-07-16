@@ -1,3 +1,98 @@
-h1 {
-	color: black;
+$color-tips-bg: #fff;
+$color-tips-title: #4a4a4a;
+$color-tips-separator: #c4c0ff;
+$color-tips-item: #9b9b9b;
+$color-tips-item-border-bottom: #e4e4e4;
+$color-tips-all-tips: #7a74d2;
+
+.tips {
+	position: relative;
+	float: right;
+	top: -90px;
+	width: 290px;
+	height: 600px;
+	margin-right: 15px;
+	font-family: 'Gotham-Medium';
+	text-align: center;
+	background-color: $color-tips-bg;
+	box-shadow: 0 0 34px 0 rgba(115, 95, 255, 0.32);
+
+	h2 {
+		margin-top: 39px;
+		font-size: 16px;
+		color: $color-tips-title;
+	}
+
+	hr {
+		width: 70px;
+		margin: 27px auto 16px;
+		border: solid 1px $color-tips-separator;
+	}
+
+	& > div {
+		margin-bottom: 36px;
+
+		li {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: calc(100% - 30px);
+			height: 100px;
+			margin: 0 auto;
+			font-size: 14px;
+			text-decoration: none;
+			color: $color-tips-item;
+			border-bottom: solid 1px $color-tips-item-border-bottom;
+
+			.avatar,
+			.comment {
+				transform: translateY(-15%);
+			}
+
+			.avatar {
+				margin-left: -5px;
+				margin-right: 25px;
+
+				&-overlay {
+					position: relative;
+					display: inline-block;
+					width: 40px;
+					height: 40px;
+					transform: rotate(-45deg);
+					overflow: hidden;
+
+					img {
+						position: absolute;
+						width: 150%;
+						height: 150%;
+						top: -10px;
+						left: -10px;
+						transform: rotate(45deg);
+					}
+				}
+			}
+
+			.comment {
+				padding-top: 45px;
+				font-size: 14px;
+				text-align: left;
+
+				p {
+					margin-top: 18px;
+					font-family: 'Gotham-Book';
+				}
+			}
+		}
+	}
+
+	& > span {
+		font-size: 11px;
+		text-decoration: underline;
+		color: $color-tips-all-tips;
+		cursor: pointer;
+
+		&:hover {
+			color: lighten($color-tips-all-tips, 10%);
+		}
+	}
 }

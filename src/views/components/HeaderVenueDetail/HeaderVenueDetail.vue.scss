@@ -1,0 +1,122 @@
+$color-header-bg: #12195f;
+$color-header-text: #fff;
+
+header {
+	position: relative;
+	height: 600px;
+	background-color: $color-header-bg;
+
+	.bottom-overlay {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 115px;
+		opacity: 0.8;
+		background-image: linear-gradient(95deg, #1e0db4, #e44747);
+	}
+
+	section {
+		height: inherit;
+		color: $color-header-text;
+
+		.logo-container {
+			position: relative;
+			margin-bottom: 27px;
+
+			.logo {
+				text-align: center;
+
+				&:first-child {
+					height: 366px;
+				}
+
+				&:nth-child(2) {
+					position: absolute;
+					top: 120px;
+					left: 210px;
+				}
+			}
+		}
+
+		.name {
+			margin-bottom: 28px;
+			margin-left: 25px;
+
+			h1 {
+				font-family: 'Gotham-Light';
+				font-size: 64px;
+			}
+		}
+
+		.info {
+			margin-left: 20px;
+			font-family: 'Gotham-Medium';
+			font-size: 12px;
+
+			&-main {
+				position: relative;
+				padding-top: 24px;
+
+				.address {
+					margin-bottom: 18px;
+
+					span {
+						margin-left: 8px;
+					}
+				}
+
+				.phone {
+					margin-bottom: 14px;
+
+					span {
+						margin-left: 6px;
+					}
+				}
+
+				.info-bottom {
+					div {
+						display: inline-block;
+					}
+
+					.people {
+						span {
+							margin-left: 7px;
+						}
+					}
+
+					.ticket {
+						margin-left: 22px;
+
+						hr {
+							display: inline-block;
+							width: 48px;
+							margin: 0 0 2px 7px;
+							border: 2px solid #c4c0ff;
+							border-radius: 100px;
+						}
+					}
+				}
+			}
+
+			.rating {
+				position: relative;
+				float: right;
+				top: -125px;
+				right: 20px;
+				width: 65px;
+				height: 65px;
+				transform: rotate(-45deg);
+				background-color: #776cee;
+
+				span {
+					position: absolute;
+					top: 25px;
+					right: 20px;
+					font-family: 'Gotham-Book';
+					font-size: 18px;
+					transform: rotate(45deg);
+				}
+			}
+		}
+	}
+}

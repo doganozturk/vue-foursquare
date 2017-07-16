@@ -1,4 +1,4 @@
-import HeaderSearch from "../../components/HeaderSearch/HeaderSearch";
+import HeaderVenues from "../../components/HeaderVenues/HeaderVenues";
 import Venue from "../../components/Venue/Venue";
 import RecentSearches from "../../components/RecentSearches/RecentSearches";
 import Footer from "../../components/Footer/Footer";
@@ -6,7 +6,7 @@ import Footer from "../../components/Footer/Footer";
 export default {
   name: "Venues",
   components: {
-    HeaderSearch,
+    HeaderVenues,
     Venue,
     RecentSearches,
     Footer
