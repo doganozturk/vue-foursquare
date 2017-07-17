@@ -11,17 +11,24 @@ export default {
     AppFooter
   },
   computed: {
-    ...mapGetters(["venue"])
+    ...mapGetters(["venue", "venuePhotos"])
   },
   created() {
     this.setVenue();
+    this.setVenuePhotos();
   },
   methods: {
     setVenue() {
       this.fetchVenueById();
     },
+    setVenuePhotos() {
+      this.fetchVenuePhotos();
+    },
     fetchVenueById() {
       this.$store.dispatch("fetchVenueById", this.$route.query.id);
+    },
+    fetchVenuePhotos() {
+      this.$store.dispatch("fetchVenuePhotos", this.$route.query.id);
     }
   }
 };

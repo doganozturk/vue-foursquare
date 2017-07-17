@@ -6,7 +6,8 @@ Vue.use(Vuex);
 
 const state = {
   venues: [],
-  venue: {}
+  venue: {},
+  venuePhotos: []
 };
 
 const getters = {
@@ -15,6 +16,9 @@ const getters = {
   },
   venue(state) {
     return state.venue;
+  },
+  venuePhotos(state) {
+    return state.venuePhotos;
   }
 };
 
@@ -24,6 +28,9 @@ const mutations = {
   },
   setVenue(state, venue) {
     state.venue = venue;
+  },
+  setVenuePhotos(state, venuePhotos) {
+    state.venuePhotos = venuePhotos;
   }
 };
 
@@ -36,6 +43,11 @@ const actions = {
   fetchVenueById(context, id) {
     return HTTP.fetchVenueById(id).then(response => {
       context.commit("setVenue", response.response);
+    });
+  },
+  fetchVenuePhotos(context, id) {
+    return HTTP.fetchVenuePhotos(id).then(response => {
+      context.commit("setVenuePhotos", response.response);
     });
   }
 };

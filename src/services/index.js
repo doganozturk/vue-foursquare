@@ -13,7 +13,7 @@ const HTTP = axios.create({
  *
  * @param {object} ctx / current Vue view-model object, 'this'
  * @param {object} body / {location: location, query: query}
- * @returns {object}
+ * @returns {array}
  */
 HTTP.fetchVenues = async body => {
   try {
@@ -46,6 +46,29 @@ HTTP.fetchVenueById = async id => {
     return {
       success: true,
       response: response.data.response.venue
+    };
+  } catch (error) {
+    return {
+      success: false,
+      response: error
+    };
+  }
+};
+
+/**
+ * GET Venue Photos by Venue ID
+ *
+ * @param {string} id
+ * @returns {array}
+ */
+HTTP.fetchVenuePhotos = async id => {
+  try {
+    const url = `/${id}/photos?limit=12&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&v=${VERSION_DATE}`;
+    const response = await HTTP.get(url);
+
+    return {
+      success: true,
+      response: response.data.response.photos.items
     };
   } catch (error) {
     return {

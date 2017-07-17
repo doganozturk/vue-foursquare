@@ -2,7 +2,7 @@ section
 	HeaderVenueDetail(:venue="venue")
 	section(class="container group")
 		section(class="venue-detail")
-			div(class="venue-detail-image venue-detail-owner" v-for="photo in venue.photos.groups[0].items" :style="{ 'background-image': 'url(' + photo.prefix + '290x290' + photo.suffix + ')' }")
+			div(class="venue-detail-image venue-detail-owner" v-for="photo in venuePhotos" :style="{ 'background-image': 'url(' + photo.prefix + '290x290' + photo.suffix + ')' }")
 				div(class="avatar")
 					div(class="avatar-overlay")
 						img(:src="photo.user.photo.prefix + '100x100' + photo.user.photo.suffix")
