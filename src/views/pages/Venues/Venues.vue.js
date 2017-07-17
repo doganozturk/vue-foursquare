@@ -21,7 +21,7 @@ export default {
     AppFooter
   },
   watch: {
-    $route: "setRecentSearches"
+    $route: "fetchVenues"
   },
   created() {
     this.setRecentSearches();
