@@ -11,8 +11,6 @@ You need Node.js (v6.11.1), NPM and/or Yarn on your local machine. I strongly re
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
-
 Vue-Foursquare uses Vue.js pre-made Webpack template as its base. So you have all commands that come with it and many more!
 
 ``` bash
