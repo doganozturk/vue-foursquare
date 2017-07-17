@@ -29,14 +29,10 @@ export default {
     },
     fetchVenues() {
       this.setRecentSearches();
-      this.$store
-        .dispatch("fetchVenues", {
-          location: this.location,
-          query: this.query
-        })
-        .then(() => {
-          this.venues = this.$store.state.venues;
-        });
+      this.$store.dispatch("fetchVenues", {
+        location: this.location,
+        query: this.query
+      });
       this.$router.push({
         path: "venues",
         query: { location: this.location, query: this.query }

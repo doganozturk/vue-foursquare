@@ -6,7 +6,5 @@ export default {
   components: {
     HeaderHome,
     AppFooter
-  },
-  created() {},
-  methods: {}
+  }
 };

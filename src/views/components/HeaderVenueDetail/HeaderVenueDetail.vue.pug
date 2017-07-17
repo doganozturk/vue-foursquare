@@ -38,4 +38,4 @@ header(:style="{ 'background-image': 'url(' + getBestPhoto + ')' }")
 							span {{ venue.stats.checkinsCount }}
 					PriceIndicator(:price="venue.price")
 			div(class="rating")
-				span {{ ratingControl }}
+				span {{ ratingControl(venue) }}

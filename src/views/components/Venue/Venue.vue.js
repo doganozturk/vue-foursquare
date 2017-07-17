@@ -1,4 +1,5 @@
 import get from "lodash.get";
+import mixin from "../../../lib/mixin";
 import PriceIndicator from "../PriceIndicator/PriceIndicator";
 
 export default {
@@ -6,6 +7,7 @@ export default {
   components: {
     PriceIndicator
   },
+  mixins: [mixin],
   props: {
     venue: {}
   },
@@ -18,16 +20,6 @@ export default {
       const data = get(this.venue, "venue.featuredPhotos.items[0]");
 
       if (data) return `${data.prefix}${imgSize}${data.suffix}`;
-      return false;
-    },
-    ratingControl() {
-      let rating = get(this.venue, "venue.rating");
-
-      if (rating && typeof rating === "number") {
-        rating = rating.toString();
-        if (rating.length === 1) return `${rating}.0`;
-        return rating;
-      }
       return false;
     }
   }

@@ -11,5 +11,5 @@ router-link(:to="{ path: '/venues/detail', query: { id: venue.venue.id } }" clas
 				span {{ venue.venue.stats.checkinsCount }}
 			PriceIndicator(:price="venue.venue.price")
 			div(class="rating")
-				span {{ ratingControl }}
+				span {{ ratingControl(venue.venue) }}
 	div(class="venue-overlay")
