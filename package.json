@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "doganozturk <doganozturk2005@gmail.com>",
+  "license": "MIT",
   "private": true,
   "repository": {
     "type": "git",
@@ -23,15 +24,8 @@
     "format": "prettier --write"
   },
   "lint-staged": {
-    "*.scss": [
-      "yarn run lint:stylelint",
-      "git add"
-    ],
-    "*.js": [
-      "yarn run format",
-      "yarn run lint:eslint",
-      "git add"
-    ]
+    "*.scss": ["yarn run lint:stylelint", "git add"],
+    "*.js": ["yarn run format", "yarn run lint:eslint", "git add"]
   },
   "pre-commit": "lint-staged",
   "dependencies": {
@@ -98,9 +92,5 @@
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"]
 }
