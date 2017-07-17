@@ -20,6 +20,12 @@ $color-tips-all-tips: #7a74d2;
 	.tip-container {
 		height: 600px;
 		overflow: hidden;
+		transition: height 300ms cubic-bezier(0.185, 0.54, 0.355, 1);
+
+		&.show-all-tips {
+			height: 900px;
+			overflow: scroll;
+		}
 	}
 
 	h2 {

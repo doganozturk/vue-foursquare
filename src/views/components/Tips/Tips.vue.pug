@@ -1,7 +1,7 @@
 section(class="tips")
 	h2 TIPS
 	hr
-	div(class="tip-container")
+	div(class="tip-container" :class="{ 'show-all-tips': allTips }")
 		ul
 			li(v-for="tip in tips")
 				div(class="avatar")
@@ -10,5 +10,6 @@ section(class="tips")
 				div(class="comment")
 					span {{ tip.user.firstName }} {{ tip.user.lastName }}
 					p {{ tip.text }}
-	div(class="all-tips")
-		span All Tips
+	div(class="all-tips" v-if="showAllTipsBtn")
+		span(@click="toggleAllTips" v-show="!allTips") All Tips
+		span(@click="toggleAllTips" v-show="allTips") Show Less
