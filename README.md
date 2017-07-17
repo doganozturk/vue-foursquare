@@ -1,4 +1,4 @@
-# Vue-Foursquare
+# Vue-Foursquare [![Build Status](https://travis-ci.org/doganozturk/vue-foursquare.svg?branch=master)](https://travis-ci.org/doganozturk/vue-foursquare)
 
 A SPA (Single Page App.) using Vue.js, vue-cli webpack template, SASS, Pugjs and consumes Foursquare API, especially public '/venues' endpoint. With that data,  you can search for cafes, pizza or sütlaç in any location you want. Results are shown in a beautiful interface and your last ten recent searches are there for you to visit again. When you click on one of the venues, application will take you to appropriate detail page where you can browse pictures of the place and tips by users.
 
