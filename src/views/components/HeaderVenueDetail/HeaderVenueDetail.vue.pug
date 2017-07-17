@@ -21,18 +21,21 @@ header(:style="{ 'background-image': 'url(' + getBestPhoto + ')' }")
 				div(class="address")
 					svg(xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11")
 						path(fill="#FFF" fill-rule="evenodd" d="M1.335 7.78a4.56 4.56 0 0 1 0-6.445 4.56 4.56 0 0 1 6.445 0 4.56 4.56 0 0 1 0 6.445l-3.223 3.222L1.335 7.78zm3.222-.944a2.278 2.278 0 1 0 0-4.557 2.278 2.278 0 0 0 0 4.557z")
-					span {{ venue.location.address }}
+					template(v-if="venue.location")
+						span {{ venue.location.address }}
 				div(class="phone")
 					svg(xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10")
 						path(fill="#FFF" fill-rule="evenodd" d="M10.974 7.92a1.165 1.165 0 0 1-1.14 1.411H1.166a1.167 1.167 0 0 1-1.14-1.412A5.628 5.628 0 0 1 5.5 3.5a5.598 5.598 0 0 1 5.474 4.42zM1.168 3.623c.219 0 .44-.061.638-.19 1.1-.72 2.377-1.101 3.694-1.101 1.317 0 2.595.38 3.695 1.1a1.166 1.166 0 1 0 1.277-1.951A9.052 9.052 0 0 0 5.5 0 9.053 9.053 0 0 0 .528 1.482a1.166 1.166 0 0 0 .64 2.142z")
-					span {{ venue.contact.formattedPhone }}
+					template(v-if="venue.contact")
+						span {{ venue.contact.formattedPhone }}
 				div(class="info-bottom")
 					div(class="people")
 						svg(xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10")
 							g(fill="#FFF" fill-rule="evenodd")
 								circle(cx="4.688" cy="2.188" r="2.188")
 								path(d="M4.788 8.891c2.494 0 4.245 2.495 4.245 0a4.516 4.516 0 0 0-9.033 0c0 2.495 2.293 0 4.788 0z")
-						span {{ venue.stats.checkinsCount }}
+						template(v-if="venue.stats")
+							span {{ venue.stats.checkinsCount }}
 					PriceIndicator(:price="venue.price")
 			div(class="rating")
 				span {{ ratingControl }}

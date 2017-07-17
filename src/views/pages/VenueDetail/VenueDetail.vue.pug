@@ -8,7 +8,8 @@ section
 						img(:src="photo.user.photo.prefix + '100x100' + photo.user.photo.suffix")
 				span {{ photo.user.firstName }} {{ photo.user.lastName }}
 				div(class="venue-detail-image-overlay")
-		Tips(:tips="venue.tips.groups[0].items")
+		template(v-if="venue.tips")
+			Tips(:tips="venue.tips.groups[0].items")
 	section(class="container")
 		hr
 	AppFooter

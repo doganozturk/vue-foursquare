@@ -2,7 +2,7 @@ section
 	HeaderVenues
 	section(class="container group")
 		section(class="venues")
-			template(v-for="venue in venues")
+			template(v-for="venue in venues" v-if="venue.venue")
 				Venue(:venue="venue")
 		RecentSearches(:recentSearches="recentSearches")
 	section(class="container")
