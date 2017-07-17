@@ -10,12 +10,17 @@ $color-tips-all-tips: #7a74d2;
 	float: right;
 	top: -90px;
 	width: 290px;
-	height: 600px;
+	height: auto;
 	margin-right: 15px;
 	font-family: 'Gotham-Medium';
 	text-align: center;
 	background-color: $color-tips-bg;
 	box-shadow: 0 0 34px 0 rgba(115, 95, 255, 0.32);
+
+	.tip-container {
+		height: 600px;
+		overflow: hidden;
+	}
 
 	h2 {
 		margin-top: 39px;
@@ -37,7 +42,7 @@ $color-tips-all-tips: #7a74d2;
 			align-items: center;
 			justify-content: center;
 			width: calc(100% - 30px);
-			height: 100px;
+			height: auto;
 			margin: 0 auto;
 			font-size: 14px;
 			text-decoration: none;
@@ -50,7 +55,7 @@ $color-tips-all-tips: #7a74d2;
 			}
 
 			.avatar {
-				margin-left: -5px;
+				margin-left: 5px;
 				margin-right: 25px;
 
 				&-overlay {
@@ -73,6 +78,7 @@ $color-tips-all-tips: #7a74d2;
 			}
 
 			.comment {
+				width: 200px;
 				padding-top: 45px;
 				font-size: 14px;
 				text-align: left;
@@ -85,14 +91,16 @@ $color-tips-all-tips: #7a74d2;
 		}
 	}
 
-	& > span {
-		font-size: 11px;
-		text-decoration: underline;
-		color: $color-tips-all-tips;
-		cursor: pointer;
+	.all-tips {
+		span {
+			font-size: 11px;
+			text-decoration: underline;
+			color: $color-tips-all-tips;
+			cursor: pointer;
 
-		&:hover {
-			color: lighten($color-tips-all-tips, 10%);
+			&:hover {
+				color: lighten($color-tips-all-tips, 10%);
+			}
 		}
 	}
 }

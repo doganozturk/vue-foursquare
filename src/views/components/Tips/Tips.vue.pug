@@ -1,34 +1,14 @@
 section(class="tips")
 	h2 TIPS
 	hr
-	div
+	div(class="tip-container")
 		ul
-			li
+			li(v-for="tip in tips")
 				div(class="avatar")
 					div(class="avatar-overlay")
-						img(src="../../../assets/images/background.png")
+						img(:src="getUserPhoto(tip.user.photo)")
 				div(class="comment")
-					span Arzu Sendag
-					p Güzel mekan çok sevdim.
-			li
-				div(class="avatar")
-					div(class="avatar-overlay")
-						img(src="../../../assets/images/background.png")
-				div(class="comment")
-					span Arzu Sendag
-					p Güzel mekan çok sevdim.
-			li
-				div(class="avatar")
-					div(class="avatar-overlay")
-						img(src="../../../assets/images/background.png")
-				div(class="comment")
-					span Arzu Sendag
-					p Güzel mekan çok sevdim.
-			li
-				div(class="avatar")
-					div(class="avatar-overlay")
-						img(src="../../../assets/images/background.png")
-				div(class="comment")
-					span Arzu Sendag
-					p Güzel mekan çok sevdim.
-	span All Tips
+					span {{ tip.user.firstName }} {{ tip.user.lastName }}
+					p {{ tip.text }}
+	div(class="all-tips")
+		span All Tips

@@ -4,7 +4,17 @@ $color-header-text: #fff;
 header {
 	position: relative;
 	height: 600px;
-	background-color: $color-header-bg;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	.top-overlay {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 600px;
+		background-color: $color-header-bg;
+		opacity: 0.6;
+	}
 
 	.bottom-overlay {
 		position: absolute;
@@ -39,12 +49,17 @@ header {
 		}
 
 		.name {
+			position: relative;
 			margin-bottom: 28px;
 			margin-left: 25px;
 
 			h1 {
+				width: 800px;
 				font-family: 'Gotham-Light';
 				font-size: 64px;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
 			}
 		}
 

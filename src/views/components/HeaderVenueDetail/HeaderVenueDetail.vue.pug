@@ -1,4 +1,5 @@
-header
+header(:style="{ 'background-image': 'url(' + getBestPhoto + ')' }")
+	section(class="top-overlay")
 	section(class="bottom-overlay")
 	section(class="container")
 		div(class="logo-container")
@@ -14,27 +15,27 @@ header
 						path(stroke="#FFC5C5" stroke-width="3.5" d="M2.475 125.72L125.719 2.474l123.245 123.244-123.245 123.245L2.475 125.719z")
 						path(fill="#FFC5C5" d="M137.537 110h-30.352a2.186 2.186 0 0 0-2.185 2.186v12.345c0 8.919 7.256 16.175 16.176 16.175 7.424 0 13.692-5.029 15.586-11.859h.775c5.197 0 9.425-4.227 9.425-9.423S142.734 110 137.537 110zm-4.558 14.531c0 6.51-5.295 11.804-11.803 11.804-6.509 0-11.805-5.295-11.805-11.804v-10.16h23.608v10.16zm4.558-.054h-.186V114.37h.186a5.06 5.06 0 0 1 5.054 5.054 5.06 5.06 0 0 1-5.054 5.052z")
 		div(class="name")
-			h1 Name of Cafe
+			h1(:title="venue.name") {{ venue.name }}
 		div(class="info")
 			div(class="info-main")
 				div(class="address")
 					svg(xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11")
 						path(fill="#FFF" fill-rule="evenodd" d="M1.335 7.78a4.56 4.56 0 0 1 0-6.445 4.56 4.56 0 0 1 6.445 0 4.56 4.56 0 0 1 0 6.445l-3.223 3.222L1.335 7.78zm3.222-.944a2.278 2.278 0 1 0 0-4.557 2.278 2.278 0 0 0 0 4.557z")
-					span Caferağa Mh. Kadife Sk. No:15 Kadıköy
+					span {{ venue.location.address }}
 				div(class="phone")
 					svg(xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10")
 						path(fill="#FFF" fill-rule="evenodd" d="M10.974 7.92a1.165 1.165 0 0 1-1.14 1.411H1.166a1.167 1.167 0 0 1-1.14-1.412A5.628 5.628 0 0 1 5.5 3.5a5.598 5.598 0 0 1 5.474 4.42zM1.168 3.623c.219 0 .44-.061.638-.19 1.1-.72 2.377-1.101 3.694-1.101 1.317 0 2.595.38 3.695 1.1a1.166 1.166 0 1 0 1.277-1.951A9.052 9.052 0 0 0 5.5 0 9.053 9.053 0 0 0 .528 1.482a1.166 1.166 0 0 0 .64 2.142z")
-					span 0 (216) 345 67 78
+					span {{ venue.contact.formattedPhone }}
 				div(class="info-bottom")
 					div(class="people")
 						svg(xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10")
 							g(fill="#FFF" fill-rule="evenodd")
 								circle(cx="4.688" cy="2.188" r="2.188")
 								path(d="M4.788 8.891c2.494 0 4.245 2.495 4.245 0a4.516 4.516 0 0 0-9.033 0c0 2.495 2.293 0 4.788 0z")
-						span 123
+						span {{ venue.stats.checkinsCount }}
 					div(class="ticket")
 						svg(xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10")
 							path(fill="#FFF" fill-rule="evenodd" d="M.46 4.984a.997.997 0 0 1 .366-1.369L5.828.727c.479-.276 1.293-.36 1.808-.19l2.557.845c.52.172.85.752.742 1.286l-.541 2.646c-.11.538-.58 1.195-1.066 1.475L4.326 9.677a.995.995 0 0 1-1.368-.368L.46 4.984zm8.231-.521a1.167 1.167 0 1 0-1.166-2.021 1.167 1.167 0 0 0 1.166 2.02z")
 						hr
 			div(class="rating")
-				span 8.8
+				span {{ ratingControl }}

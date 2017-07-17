@@ -1,20 +1,14 @@
 section
-	HeaderVenueDetail
+	HeaderVenueDetail(:venue="venue")
 	section(class="container group")
 		section(class="venue-detail")
-			div(class="venue-detail-image venue-detail-owner")
+			div(class="venue-detail-image venue-detail-owner" v-for="photo in venue.photos.groups[0].items" :style="{ 'background-image': 'url(' + photo.prefix + '290x290' + photo.suffix + ')' }")
 				div(class="avatar")
 					div(class="avatar-overlay")
-						img(src="../../../assets/images/background.png")
-				span Cem Ekici
-			div(class="venue-detail-image")
-			div(class="venue-detail-image")
-			div(class="venue-detail-image")
-			div(class="venue-detail-image")
-			div(class="venue-detail-image")
-			div(class="venue-detail-image")
-			div(class="venue-detail-image")
-		Tips
+						img(:src="photo.user.photo.prefix + '100x100' + photo.user.photo.suffix")
+				span {{ photo.user.firstName }} {{ photo.user.lastName }}
+				div(class="venue-detail-image-overlay")
+		Tips(:tips="venue.tips.groups[0].items")
 	section(class="container")
 		hr
 	AppFooter

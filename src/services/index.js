@@ -17,13 +17,35 @@ const HTTP = axios.create({
  */
 HTTP.fetchVenues = async body => {
   try {
-    const response = await HTTP.get(
-      `/explore?near=${body.location}&query=${body.query}&limit=10&venuePhotos=1&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&v=${VERSION_DATE}`
-    );
+    const url = `/explore?near=${body.location}&query=${body.query}&limit=10&venuePhotos=1&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&v=${VERSION_DATE}`;
+    const response = await HTTP.get(url);
 
     return {
       success: true,
       response: response.data.response.groups[0].items
+    };
+  } catch (error) {
+    return {
+      success: false,
+      response: error
+    };
+  }
+};
+
+/**
+ * GET a Venue by its ID
+ *
+ * @param {string} id
+ * @returns {object}
+ */
+HTTP.fetchVenueById = async id => {
+  try {
+    const url = `/${id}?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&v=${VERSION_DATE}`;
+    const response = await HTTP.get(url);
+
+    return {
+      success: true,
+      response: response.data.response.venue
     };
   } catch (error) {
     return {

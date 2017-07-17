@@ -16,8 +16,11 @@ const routes = [
     })
   },
   {
-    path: "/venue-detail",
-    component: VenueDetail
+    path: "/venues/detail",
+    component: VenueDetail,
+    props: route => ({
+      query: { id: route.query.id }
+    })
   },
   {
     path: "*",
