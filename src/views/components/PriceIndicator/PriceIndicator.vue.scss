@@ -1,0 +1,52 @@
+$color-price-indicator-tier-1: #c9c5ff;
+$color-price-indicator-tier-2: #a59fee;
+$color-price-indicator-tier-3: #8b81ff;
+$color-price-indicator-tier-4: #685dea;
+
+.price {
+	margin-left: 22px;
+
+	.price-indicator {
+		position: relative;
+		display: inline-block;
+		top: -3px;
+		width: 60px;
+		height: 3px;
+		margin-left: 7px;
+		border-radius: 100px;
+		background-color: rgba(0, 0, 0, 0.5);
+
+		.tier-1,
+		.tier-2,
+		.tier-3,
+		.tier-4 {
+			position: absolute;
+			display: inline-block;
+			width: 25%;
+			height: 3px;
+			background-color: $color-price-indicator-tier-1;
+		}
+
+		.tier-1 {
+			border-top-left-radius: 100px;
+			border-bottom-left-radius: 100px;
+		}
+
+		.tier-2 {
+			left: 25%;
+			background-color: $color-price-indicator-tier-2;
+		}
+
+		.tier-3 {
+			left: 50%;
+			background-color: $color-price-indicator-tier-3;
+		}
+
+		.tier-4 {
+			left: 75%;
+			border-top-right-radius: 100px;
+			border-bottom-right-radius: 100px;
+			background-color: $color-price-indicator-tier-4;
+		}
+	}
+}

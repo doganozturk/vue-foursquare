@@ -9,10 +9,7 @@ router-link(:to="{ path: '/venues/detail', query: { id: venue.venue.id } }" clas
 						circle(cx="4.688" cy="2.188" r="2.188")
 						path(d="M4.788 8.891c2.494 0 4.245 2.495 4.245 0a4.516 4.516 0 0 0-9.033 0c0 2.495 2.293 0 4.788 0z")
 				span {{ venue.venue.stats.checkinsCount }}
-			div(class="ticket")
-				svg(xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10")
-					path(fill="#FFF" fill-rule="evenodd" d="M.46 4.984a.997.997 0 0 1 .366-1.369L5.828.727c.479-.276 1.293-.36 1.808-.19l2.557.845c.52.172.85.752.742 1.286l-.541 2.646c-.11.538-.58 1.195-1.066 1.475L4.326 9.677a.995.995 0 0 1-1.368-.368L.46 4.984zm8.231-.521a1.167 1.167 0 1 0-1.166-2.021 1.167 1.167 0 0 0 1.166 2.02z")
-				hr
+			PriceIndicator(:price="venue.venue.price")
 			div(class="rating")
 				span {{ ratingControl }}
 	div(class="venue-overlay")

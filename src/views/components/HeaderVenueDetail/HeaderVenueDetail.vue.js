@@ -1,5 +1,10 @@
+import PriceIndicator from "../PriceIndicator/PriceIndicator";
+
 export default {
   name: "HeaderVenueDetail",
+  components: {
+    PriceIndicator
+  },
   props: {
     venue: {
       type: Object
