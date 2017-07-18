@@ -1,5 +1,8 @@
 import axios from "axios";
 
+// Because this is an app for studying purposes
+// and the app consumes a public API
+// I put this credentials in worst possible way :(
 const CLIENT_ID = "V131V0IPODZOAI4DH0TXB0W1VF4R1QCAHASGHJI35D3KJLWK";
 const CLIENT_SECRET = "L5RZFRA1K2KPH33H12BFD3MECOJKEBIJSLP14KXYRYW3A5AF";
 const VERSION_DATE = "20170715";
