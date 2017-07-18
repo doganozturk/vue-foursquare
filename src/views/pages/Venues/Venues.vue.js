@@ -36,6 +36,7 @@ export default {
       this.venues = venues.length ? venues : this.fetchVenues();
     },
     fetchVenues() {
+      this.setRecentSearches();
       this.$store.dispatch("fetchVenues", {
         location: this.$route.query.location,
         query: this.$route.query.query
