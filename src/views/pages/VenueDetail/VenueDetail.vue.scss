@@ -11,6 +11,7 @@ $color-tips-owner-name: #fff;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
+		position: relative;
 		float: left;
 		width: 290px;
 		height: 290px;
@@ -28,6 +29,7 @@ $color-tips-owner-name: #fff;
 		&-overlay {
 			display: none;
 			position: absolute;
+			top: 0;
 			width: 290px;
 			height: 290px;
 			background-color: rgba(18, 25, 95, 0.5);
