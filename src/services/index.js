@@ -14,9 +14,8 @@ const HTTP = axios.create({
 /**
  * GET Venues
  *
- * @param {object} ctx / current Vue view-model object, 'this'
  * @param {object} body / {location: location, query: query}
- * @returns {array}
+ * @returns {object}
  */
 HTTP.fetchVenues = async body => {
   try {
@@ -62,7 +61,7 @@ HTTP.fetchVenueById = async id => {
  * GET Venue Photos by Venue ID
  *
  * @param {string} id
- * @returns {array}
+ * @returns {object}
  */
 HTTP.fetchVenuePhotos = async id => {
   try {
