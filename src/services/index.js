@@ -4,7 +4,7 @@ import axios from "axios";
 // and the app consumes a public API
 // I put this credentials in worst possible way :(
 const CLIENT_ID = "J4SO4AHBQFW0ETDH2EG4JPEUQ5XQLVRKIE30QVAJNXPQ25SV";
-const CLIENT_SECRET = "MGDXYQ3PTJKHJQ0NFLCRJH5PYQ4U24ZPYRPTHMTGXN5AQA2R";
+const CLIENT_SECRET = "J3QK4CHLJ2BE4URDDCGXXBNF3PXGV35YV0SG1E3L2WXGN54T";
 const VERSION_DATE = "20170715";
 
 const HTTP = axios.create({
